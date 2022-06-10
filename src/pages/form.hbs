@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="https://glitch.com/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alô SQLite: Incluir Nova Linguagem</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="manifest" href="/manifest.json"/>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="content" role="main">
+      <h1>Incluir Nova Linguagem</h1>
+{{#if error}}
+      <p class="error">
+        {{error}}
+      </p>
+{{else}}
+      <!-- O usuário pode limpar a lista de logs se ele primeiramente determinar a ADMIN_KEY presente no .env-->
+      <form action="/incluirLinguagem" method="post">
+        <h2>
+          Incluindo uma nova linguagem na votação
+        </h2>
+        <input type="text" id="nome" name="nome" required>
+        <button type="submit">Incluir</button>
+      </form>
+{{/if}}
+    </div>
+  </div>
+  <!-- A área footer armazena o botão remix — você pode usá-lo ou retirá-lo se quiser ✂ -->
+  <footer class="footer">   
+    <div class="links"></div>
+    <a href="/">Home</a>
+    <span class="divider">|</span>
+    <a href="/resultado">Apuração</a>
+    <span class="divider">|</span>
+    <a href="/logs">Admin</a>
+    <span class="divider">|</span>
+    <a href="/novaLinguagem">Nova Linguagem</a>
+    <a class="btn--remix" target="_top" href="https://glitch.com/edit/#!/remix/glitch-hello-sqlite">
+      <img src="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FLogo_Color.svg?v=1618199565140"
+        alt="" />
+      Remix on Glitch
+    </a>
+  </footer>
+</body>
+
+</html>
